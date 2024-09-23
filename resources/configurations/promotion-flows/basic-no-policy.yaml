@@ -1,0 +1,15 @@
+apiVersion: codefresh.io/v1beta1
+kind: PromotionFlow
+metadata:
+  name: basic-no-policy
+  annotations:
+    description: ""
+spec:
+  triggerEnvironment: dev
+  steps:
+    - environment: pre-prod
+      dependsOn:
+        - dev
+    - environment: prod
+      dependsOn:
+        - pre-prod
