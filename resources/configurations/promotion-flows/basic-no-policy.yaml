@@ -13,3 +13,5 @@ spec:
     - environment: prod
       dependsOn:
         - pre-prod
+      policy:
+        action: commit
