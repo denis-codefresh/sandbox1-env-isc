@@ -18,5 +18,6 @@ gitops-runtime:
           - denys-sandbox-1.rnd-sandbox.cf-infra.com
         protocol: https
       name: codefresh
+      isConfigurationRuntime: true
   installer:
     skipValidation: true
