@@ -10,6 +10,12 @@ spec:
           operator: In
           values:
             - '*basic*'
+    - name: merged-policy
+      gitTriggerSelectors:
+        - key: commitMessage
+          operator: In
+          values:
+            - '*merged*'
   promotionTemplate:
     versionSource:
       file: values.yaml
