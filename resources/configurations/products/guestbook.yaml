@@ -1,0 +1,20 @@
+apiVersion: codefresh.io/v1beta1
+kind: Product
+metadata:
+  name: guestbook
+spec:
+  promotionFlows:
+    - name: basic-no-policy
+      gitTriggerSelectors:
+        - key: commitMessage
+          operator: In
+          values:
+            - '*basic*'
+  promotionTemplate:
+    versionSource:
+      file: values.yaml
+      jsonPath: $.image.tag
+    promotion:
+      values.yaml:
+        jsonPaths:
+          - $.image.tag
