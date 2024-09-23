@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: codefresh-release
+  labels:
+    codefresh.io/entity: runtime
+    codefresh.io/internal: 'true'
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/denis-codefresh/sandbox1-env-isc.git
+    targetRevision: HEAD
+    path: resources/codefresh/chart
+    helm:
+      releaseName: codefresh-release
+  destination:
+    namespace: codefresh
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true
