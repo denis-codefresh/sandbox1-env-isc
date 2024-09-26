@@ -1,20 +1,20 @@
-apiVersion: codefresh.io/v1beta1
-kind: PromotionFlow
-metadata:
-  name: merged-policy
-  annotations:
-    description: ""
-spec:
-  triggerEnvironment: dev
-  steps:
-    - environment: pre-prod
-      dependsOn:
-        - dev
-      policy:
-        preAction: inline-echo
-    - environment: prod
-      dependsOn:
-        - dev
-      policy:
-        postAction: inline-echo
-        action: commit
+# apiVersion: codefresh.io/v1beta1
+# kind: PromotionFlow
+# metadata:
+#   name: merged-policy
+#   annotations:
+#     description: ""
+# spec:
+#   triggerEnvironment: dev
+#   steps:
+#     - environment: pre-prod
+#       dependsOn:
+#         - dev
+#       policy:
+#         preAction: inline-echo
+#     - environment: prod
+#       dependsOn:
+#         - dev
+#       policy:
+#         postAction: inline-echo
+#         action: commit
