@@ -1,0 +1,16 @@
+apiVersion: codefresh.io/v1beta1
+kind: PromotionPolicy
+metadata:
+  name: dnd
+spec:
+  priority: 1
+  selector:
+    product:
+      names:
+        - trio-app
+    targetEnvironment:
+      types:
+        - NON_PROD
+  policy:
+    action: commit
+    preAction: prod-post-echo
