@@ -1,0 +1,9 @@
+apiVersion: codefresh.io/v1beta1
+kind: Product
+metadata:
+  name: trio-app
+spec:
+  promotionTemplate:
+    versionSource:
+      file: version.yaml
+      jsonPath: $.version
