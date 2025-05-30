@@ -15,7 +15,7 @@ spec:
   source:
     directory:
       include: >-
-        {all-runtimes-all-clusters/**/*.yaml,all-runtimes-all-clusters/*.yaml,control-planes/**/*.yaml,control-planes/*.yaml,runtimes/gitops-runtime-helm/**/*.yaml,runtimes/gitops-runtime-helm/*.yaml}
+        {all-runtimes-all-clusters/**/*.yaml,all-runtimes-all-clusters/*.yaml,configurations/**/*.yaml,control-planes/**/*.yaml,control-planes/*.yaml,runtimes/gitops-runtime-helm/**/*.yaml,runtimes/gitops-runtime-helm/*.yaml}
       recurse: true
     path: resources
     repoURL: https://github.com/denis-codefresh/sandbox1-env-isc.git
